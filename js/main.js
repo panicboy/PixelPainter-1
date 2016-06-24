@@ -10,9 +10,6 @@ window.onload = function () {
         countDiv++;
         newColorCell.id = countDiv;
         newColorCell.className = 'squares';
-        //adding x & y coordinates
-        newCell.x = l;
-        newCell.y = k;
         newColorCell.style.backgroundColor = colorSelection[countDiv];
         newColorCell.addEventListener('click', painterGenerator.clickColor);
         document.getElementById('rows' + i).appendChild(newColorCell);
@@ -27,7 +24,13 @@ window.onload = function () {
 
     for(var l = 0; l < painterGenerator.getRowWidth(); l++){
       var newCell = document.createElement('div');
-
+      //adding x & y coordinates
+      newCell.x = l;
+      newCell.y = k;
+      //adding RGB placeholders
+      newCell.r = Number;
+      newCell.g = Number;
+      newCell.b = Number;
       countDiv++;
       newCell.id = countDiv;
       newCell.className = 'gridSquares';
